@@ -1,65 +1,66 @@
 app.config(function($stateProvider, $urlRouterProvider){
-    $urlRouterProvider.otherwise('logIn')
+    $urlRouterProvider.otherwise('/logIn')
     
+     $stateProvider
     .state('logIn',{
-        url:'/public/apps/components/logIn/logIn.html',
-        templateUrl: 'logIn.html',
+        url:'/logIn',
+        templateUrl: '/public/apps/components/loginPage/logIn.html',
         controller: 'LogIn',
         controllerAs: 'li'
     })
     
     .state('mainPage',{
-        url:'/public/apps/components/mainPage/mainPage.html',
-        templateUrl: 'mainPage.html',
+        url:'/mainPage',
+        templateUrl: '/public/apps/components/mainPage/mainPage.html',
         controller: 'MainPage',
         controllerAs: 'mp'
     })
     
     .state('addTank',{
-        url:'/public/apps/components/addTank/addTank.html',
-        templateUrl: 'addTank.html',
+        url:'/addTank',
+        templateUrl: '/public/apps/components/addTank/addTank.html',
         controller: 'AddTank',
         controllerAs: 'at'
     })
     
     .state('canisterPage',{
-        url:'/public/apps/components/canisterPage/canisterPage.html',
-        templateUrl: 'canisterPage.html',
+        url:'/canisterPage',
+        templateUrl: '/public/apps/components/canisterPage/canisterPage.html',
         controller: 'CanisterPage',
         controllerAs: 'cp'
     })
     
     .state('addBull',{
-        url:'/public/apps/components/addBull/addBull.html',
-        templateUrl: 'addBull.html',
+        url:'/addBull',
+        templateUrl: '/public/apps/components/addBull/addBull.html',
         controller: 'AddBull',
         controllerAs: 'ab'
     })
     
     .state('addCow',{
-        url:'/public/apps/components/addCow/addCow.html',
-        templateUrl: 'addCow.html',
+        url:'/addCow',
+        templateUrl: '/public/apps/components/addCow/addCow.html',
         controller: 'AddCow',
         controllerAs: 'ac'
     })
     
     .state('searchPage',{
-        url:'/public/apps/components/searchPage/searchPage.html',
-        templateUrl: 'searchPage.html',
+        url:'/searchPage',
+        templateUrl: '/public/apps/components/searchPage/searchPage.html',
         controller: 'SearchPage',
         controllerAs: 'sp'
     })
     
     .state('cowSearch',{
-        url:'/public/apps/components/cowSearch/cowSearch.html',
-        templateUrl: 'cowSearch.html',
+        url:'/cowSearch',
+        templateUrl: '/public/apps/components/cowSearch/cowSearch.html',
         controller: 'cowSearch',
         controllerAs: 'cs'
     })
     
     .state('bullSearch',{
-        url:'/public/apps/components/bullSearch/bullSearch.html',
-        templateUrl: 'bullSearch.html',
+        url:'/bullSearch',
+        templateUrl: '/public/apps/components/bullSearch/bullSearch.html',
         controller: 'BullSearch',
         controllerAs: 'bs'
     })

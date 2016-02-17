@@ -1,3 +1,3 @@
-app.controller('BullSearch', function(){
+app.controller('BullSearch', function($scope){
     
 });

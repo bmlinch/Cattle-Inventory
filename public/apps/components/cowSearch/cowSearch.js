@@ -1,3 +1,3 @@
-app.controller('CowSearch', function(){
+app.controller('CowSearch', function($scope){
     
 });

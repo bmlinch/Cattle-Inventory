@@ -1,3 +1,3 @@
-app.controller('AddTank', function(){
+app.controller('AddTank', function($scope){
     
 });

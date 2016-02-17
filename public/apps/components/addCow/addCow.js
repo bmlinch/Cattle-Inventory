@@ -1,3 +1,3 @@
-app.controller('AddCow', function(){
+app.controller('AddCow', function($scope){
     
 });

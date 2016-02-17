@@ -1,3 +1,3 @@
-app.controller('MainPage', function(){
+app.controller('MainPage', function($scope){
     
 });

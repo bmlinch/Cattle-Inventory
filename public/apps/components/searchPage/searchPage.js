@@ -1,3 +1,3 @@
-app.controller('SearchPage', function(){
+app.controller('SearchPage', function($scope){
     
 });
