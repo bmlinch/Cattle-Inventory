@@ -1,9 +1,15 @@
 
-<h4>Add Tank</h4>
-<form name="addTankForm" ng-submit="at.addTank()" method="post">
-    <input type="text" placeholder="Tank ID/Number" name="tankId">
-    <br>
-    <input type="number" placeholder="Number of Canister" name="canisterId">
-    <br>
-    <input type="submit" value="Submit">   
-</form>
+<div class="panel col-sm-4 col-sm-offset-4" id="panelBackground">
+    <div class="panel-body">
+
+        <h4>Add Tank</h4>
+        <form name="addTankForm" ng-submit="at.addTank()" method="post">
+            <input class="input-lg inputSpacing" type="text" placeholder="Tank ID/Number" name="tankId">
+            <br>
+            <input class="input-lg inputSpacing" type="number" placeholder="Number of Canister" name="canisterId">
+            <br>
+            <input class="btn-lg buttonSpacing" type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>

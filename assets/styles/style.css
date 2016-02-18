@@ -1,0 +1,17 @@
+body{
+    background-color: #3B8DBF;
+    color: black;
+}
+#panelBackground{
+    background-color: #2B679B;
+}
+.buttonSpacing{
+    margin: 15px;
+}
+.inputSpacing{
+    margin: 10px;
+}
+.big-checkbox {
+    width: 20px;
+    height: 20px;
+    }
