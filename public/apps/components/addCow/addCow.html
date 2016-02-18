@@ -1,14 +1,21 @@
-<h4>Add/Edit Cow</h4>
-<form name="addCowForm" ng-submit="ac.addCow()" method="post">
-    <input type="text" placeholder="Cow ID/Number" name="cowId">
-    <br>
-    <input type="text" placeholder="Herd Name/Number" name="herdId">
-    <br>
-    <input type="text" placeholder="Impregnated By" name="bullId">
-    <br>
-    <input type="checkbox" name="Miscarriage" value="Miscarriage"> Miscarriage
-    <br>
-    <input type="checkbox" name="Pregnant" value="Pregnant"> Pregnant
-    <br>
-    <input type="submit" value="Submit">   
-</form>
+
+<div class="panel col-sm-4 col-sm-offset-4" id="panelBackground">
+    <div class="panel-body">
+
+        <h4>Add/Edit Cow</h4>
+        <form name="addCowForm" ng-submit="ac.addCow()" method="post">
+            <input class="input-lg inputSpacing" type="text" placeholder="Cow ID/Number" name="cowId">
+            <br>
+            <input class="input-lg inputSpacing" type="text" placeholder="Herd Name/Number" name="herdId">
+            <br>
+            <input class="input-lg inputSpacing" type="text" placeholder="Impregnated By" name="bullId">
+            <br>
+            <input class="big-checkbox" type="checkbox" name="Miscarriage" value="Miscarriage"> Miscarriage
+            <br>
+            <input class="big-checkbox" type="checkbox" name="Pregnant" value="Pregnant"> Pregnant
+            <br>
+            <input class="btn-lg buttonSpacing" type="submit" value="Submit">
+        </form>
+
+    </div>
+</div>

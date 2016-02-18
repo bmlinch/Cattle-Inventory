@@ -1,11 +1,20 @@
-<h1>Welcome to Cattle Inventory</h1>
-<h4>Sign in</h4>
-<form name="logInForm"  ng-submit="li.logIn()">
-    <input type="email" placeholder="Email/Username" name="userEmail">
-    <br>
-    <input type="password" placeholder="Password" name="userPassword">
-    <br>
-    <input type="submit" value="Log In">
-    <br>
-    <a href="">Forgot Password</a>
-</form>
+
+<div class="panel col-sm-4 col-sm-offset-4" id="panelBackground">
+    <div class="panel-body">
+
+        <h1>Welcome to Cattle Inventory</h1>
+        <h4>Sign in</h4>
+        <form name="logInForm" ng-submit="li.logIn()">
+            <input class="input-lg inputSpacing" type="email" placeholder="Email/Username" name="userEmail">
+            <br>
+            <input class="input-lg inputSpacing" type="password" placeholder="Password" name="userPassword">
+            <br>
+            <input class="btn-lg buttonSpacing" type="submit" value="Log In">
+            <br>
+            <input class="btn-lg buttonSpacing" type="submit" value="Register">
+            <br>
+            <a style="color: black;" href="">Forgot Password</a>
+        </form>
+
+    </div>
+</div>
