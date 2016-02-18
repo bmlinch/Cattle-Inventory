@@ -1,12 +1,9 @@
 
 <h4>Add Tank</h4>
-<form name="addTankForm" action="" onsubmit="" method="post">
-    <input type="email" placeholder="Email/Username" name="userEmail">
+<form name="addTankForm" ng-submit="at.addTank()" method="post">
+    <input type="text" placeholder="Tank ID/Number" name="tankId">
     <br>
-    <input type="password" placeholder="Password" name="userPassword">
+    <input type="number" placeholder="Number of Canister" name="canisterId">
     <br>
-    <input type="submit" value="Log In">
-    
-    
-    
+    <input type="submit" value="Submit">   
 </form>
