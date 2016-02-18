@@ -1,3 +1,3 @@
-app.controller('CannisterPage', function($scope){
+app.controller('CanisterPage', function($scope){
     
 });

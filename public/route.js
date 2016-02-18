@@ -54,7 +54,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('cowSearch',{
         url:'/cowSearch',
         templateUrl: '/public/apps/components/cowSearch/cowSearch.html',
-        controller: 'cowSearch',
+        controller: 'CowSearch',
         controllerAs: 'cs'
     })
     
