@@ -1,9 +1,9 @@
 
 <h4>Add Tank</h4>
 <form name="addTankForm" ng-submit="at.addTank()" method="post">
-    <input type="text" placeholder="Tank ID/Number" name="tankId">
+    <input type="text" placeholder="Tank ID/Number" ng-model="tankid" name="tankId">
     <br>
-    <input type="number" placeholder="Number of Canister" name="canisterId">
+    <input type="number" placeholder="Number of Canister" ng-model="canisternum" name="canisterId">
     <br>
     <input type="submit" value="Submit">   
 </form>
