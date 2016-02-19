@@ -15,3 +15,21 @@ body{
     width: 20px;
     height: 20px;
     }
+.navBar{
+    height: 15px !important;
+    width: 100% !important;
+    background-color: #2B679B;
+    position: fixed;
+    z-index:1;
+}
+#single-button{
+    margin-top: 6px;
+    margin-left: 6px;
+}
+#outside{
+    background-color: #04631d;
+    color: #c4c9c5;
+}
+#outsidePanel{
+    background-color: #023610;
+}
