@@ -4,6 +4,7 @@ body{
 }
 #panelBackground{
     background-color: #2B679B;
+    margin-top: 25px;
 }
 .buttonSpacing{
     margin: 15px;
