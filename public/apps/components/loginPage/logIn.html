@@ -4,13 +4,13 @@
         <h3>Cattle Inventory</h3>
         <h4>Sign in</h4>
         <form name="logInForm" ng-submit="logIn()">
-            <input class="input-md inputSpacing" type="email" placeholder="Email" ng-model="user.email">
+            <input class="input-md form-control inputSpacing" type="email" placeholder="Email" ng-model="user.email">
             <br>
-            <input class="input-md inputSpacing" type="password" placeholder="Password" ng-model="user.password">
+            <input class="input-md form-control inputSpacing" type="password" placeholder="Password" ng-model="user.password">
             <br>
-            <button type="submit" class="btn btn-small btn-block btn-default" ng-click="logIn = login">Log In</button>
+            <button type="submit" class="btn btn-small btn-default" ng-click="logIn = login">Log In</button>
             <br>
-            <button type="submit" class="btn btn-small btn-block btn-default" ng-click="logIn = register">Register</button>
+            <button type="submit" class="btn btn-small btn-default" ng-click="logIn = register">Register</button>
             <br>
             <a style="color: black;" href="">Forgot Password</a>
         </form>
