@@ -12,7 +12,7 @@
    
    <!--Navbar With Links to Every Page-->
  <div class="navBar">
-    <div class="btn-group" uib-dropdown is-open="status.isopen">
+    <div class="btn-group" uib-dropdown is-open="status.isopen" ng-if="member">
         <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle
         ng-disabled="disabled">
             Menu <span class="caret"></span>
@@ -40,6 +40,7 @@
     <script src="bower_components/angular/angular.min.js"></script>
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+     <script src="bower_components/firebase/firebase.js"></script>
     <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>     
@@ -56,6 +57,7 @@
     <script src="public/apps/components/loginPage/logIn.js"></script>
     <script src="public/apps/components/mainPage/mainPage.js"></script>
     <script src="public/apps/components/searchPage/searchPage.js"></script>
+    <script src="public/apps/components/loginPage/constants.js"></script>
 
 </body>
 </html>

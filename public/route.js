@@ -5,7 +5,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     .state('logIn',{
         url:'/logIn',
         templateUrl: '/public/apps/components/loginPage/logIn.html',
-        controller: 'LogIn',
+        controller: 'LoginController',
         controllerAs: 'li'
     })
     
