@@ -65,6 +65,13 @@ app.config(function($stateProvider, $urlRouterProvider){
         controllerAs: 'bs'
     })
     
+    .state('herdManagement',{
+        url:'/herdManagement',
+        templateUrl: 'public/apps/components/herdManagement/herdManagement.html',
+        controller: 'HerdManagement',
+        controllerAs: 'hm'
+    })
+    
     
     
 });

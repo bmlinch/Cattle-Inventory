@@ -2,8 +2,8 @@ app.factory('Models', function (DS) {
 
     return {
         User: User(),
-        Farms: Farms(),
-        Herd: Herd()
+        Herd: Herd(),
+        
     }
     
     function User(){
@@ -12,43 +12,43 @@ app.factory('Models', function (DS) {
             endpoint: 'users',
             relations: {
                 hasMany: {
-                    farms: {
-                        localField: 'farm',
-                        localKey: 'farmId'
+                    herd: {
+                        localField: 'herds',
+                        foreignKey: 'farmId'
                     }
                 }
             }
         })
     }
 
-    function Farms() {
-        return DS.defineResource({
-            name: 'farm',
-            endpoint: 'farms',
-            relations: {
-                belongsTo: {
-                    user: {
-                        localField: 'user',
-                        localKey: 'userId'
-                    },
-                    hasMany: {
-                        users: {
-                            localField: 'employee',
-                            localKey: 'employeeId'
-                        },
-                        herds: {
-                            localField: 'herd',
-                            localKey: 'herdId'
-                        },
-                        tanks: {
-                            localField: 'tank',
-                            localKey: 'tankId'
-                        }
-                    }
-                }
-            }
-        })
-    }
+    // function Farms() {
+    //     return DS.defineResource({
+    //         name: 'farm',
+    //         endpoint: 'farms',
+    //         relations: {
+    //             belongsTo: {
+    //                 user: {
+    //                     localField: 'user',
+    //                     localKey: 'userId'
+    //                 },
+    //                 hasMany: {
+    //                     users: {
+    //                         localField: 'employee',
+    //                         localKey: 'employeeId'
+    //                     },
+    //                     herds: {
+    //                         localField: 'herd',
+    //                         localKey: 'herdId'
+    //                     },
+    //                     tanks: {
+    //                         localField: 'tank',
+    //                         localKey: 'tankId'
+    //                     }
+    //                 }
+    //             }
+    //         }
+    //     })
+    // }
     
     function Herd(){
         return DS.defineResource({
@@ -56,19 +56,19 @@ app.factory('Models', function (DS) {
             endpoint: 'herds',
             relations: {
                 belongsTo: {
-                    farm: {
-                        localField: 'farm',
-                        localKey: 'farmId'
+                    user: {
+                        localField: 'user',
+                        localKey: 'userId'
                     }
                 },
                 hasMany:{
-                    cows: {
-                        localField: 'cow',
-                        localKey: 'cowId'
+                    cow: {
+                        localField: 'cows',
+                        foreignKey: 'herdId'
                     },
-                    bulls: {
-                        localField: 'bull',
-                        localKey: 'bullId'
+                    bull: {
+                        localField: 'bulls',
+                        foreignKey: 'herdId'
                     }
                 }
             }
@@ -111,16 +111,15 @@ app.factory('Models', function (DS) {
             endpoint: 'tanks',
             relations: {
                 belongsTo: {
-                    farm:{
-                        localField: 'farm',
-                        localKey: 'farmId'
+                    user:{
+                        localField: 'user',
+                        localKey: 'userId'
                     }
                 },
                 hasMany: {
-                    canisters: {
-                        localField: 'canister',
-                        localKey: 'canisterId'
-                        
+                    canister: {
+                        localField: 'canisters',
+                        foreignKey: 'tankId'
                     }
                 }
             }
@@ -139,12 +138,13 @@ app.factory('Models', function (DS) {
                     }
                 },
                 hasMany: {
-                    localField: 'cane',
-                    localKey: 'caneId'
+                    localField: 'canes',
+                    foreignKey: 'canisterId'
                 }
             }
         })
     }
+    
     function Cane(){
         return DS.defineResource({
             name: 'cane',
@@ -160,6 +160,4 @@ app.factory('Models', function (DS) {
             }
         })
     }
-    
-
 })

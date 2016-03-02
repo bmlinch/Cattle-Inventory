@@ -1,0 +1,9 @@
+<h1>hello</h1>
+
+<input ng-model="herd.name" type="text"/>
+<br/>
+<button ng-click="addHerd(herd)">Add Herd</button>
+
+<div ng-repeat="herd in herds track by herd.id">
+    {{herd.name}}  
+</div>
