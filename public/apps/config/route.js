@@ -38,7 +38,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     
     .state('addCow',{
-        url:'/addCow',
+        url:'/farm/herds/:herdId/cows/',
         templateUrl: '/public/apps/components/addCow/addCow.html',
         controller: 'AddCow',
         controllerAs: 'ac'
@@ -52,7 +52,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     
     .state('cowSearch',{
-        url:'/cowSearch',
+        url:'/farm/herds/:herdId/cows/:cowId',
         templateUrl: '/public/apps/components/cowSearch/cowSearch.html',
         controller: 'CowSearch',
         controllerAs: 'cs'
