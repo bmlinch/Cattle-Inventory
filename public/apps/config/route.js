@@ -1,6 +1,6 @@
 app.config(function($stateProvider, $urlRouterProvider){
     $urlRouterProvider.otherwise('/logIn')
-    
+    // farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId
      $stateProvider
     .state('logIn',{
         url:'/logIn',
@@ -17,21 +17,22 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     
     .state('addTank',{
-        url:'/addTank',
+        url:'/addTank',//farm/tank/ this page adds the tank id when you create it
         templateUrl: '/public/apps/components/addTank/addTank.html',
         controller: 'AddTank',
         controllerAs: 'at'
     })
     
     .state('canisterPage',{
-        url:'/canisterPage',
+        url:'/canisterPage', //farm/tanks/tankId/canisters/ this page adds the canisterId
         templateUrl: '/public/apps/components/canisterPage/canisterPage.html',
         controller: 'CanisterPage',
         controllerAs: 'cp'
     })
     
     .state('addBull',{
-        url:'/addBull',
+        url:'/addBull', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
+        //do we need another page?
         templateUrl: '/public/apps/components/addBull/addBull.html',
         controller: 'AddBull',
         controllerAs: 'ab'
