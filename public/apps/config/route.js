@@ -73,6 +73,19 @@ app.config(function($stateProvider, $urlRouterProvider){
         controllerAs: 'hm'
     })
     
-    
-    
+    .state('herdOverview',{
+        url:'/herd/:herdId',
+        templateUrl: '/public/apps/components/herdOverview/herdOverview.html',
+        controller: 'HerdOverview',
+        controllerAs: 'HO'
+    })
 });
+
+app.run(function($rootScope, AuthService){
+    $rootScope.$on('$stateChangeStart', function(){
+        if (!$rootScope.member){
+            AuthService.authMember();
+        }
+    })
+    
+})

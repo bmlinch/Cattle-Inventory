@@ -1,0 +1,23 @@
+{
+  "name": "cattle",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main-controller.js",
+  "dependencies": {
+    "angular-ui-bootstrap": "^1.2.2"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bmlinch/Cattle-Inventory.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bmlinch/Cattle-Inventory/issues"
+  },
+  "homepage": "https://github.com/bmlinch/Cattle-Inventory#readme"
+}
