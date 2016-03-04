@@ -2,17 +2,22 @@
 <div class="panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
     <div class="panel-body text-center">
 
-        <h4>Add/Edit Cow</h4>
+        <h4>Add Bovine</h4>
+        
+        <input type="checkbox" class="big-checkbox form-control" ng-model="checked"> Bull
+        
         <form name="addCowForm" ng-submit="ac.addCow()" method="post">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Cow ID/Number" name="cowId">
+            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Cow ID/Number" name="cow.id">
             <br>
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" name="herdId">
+            <input ng-show="checked" class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" name="bull.id">
             <br>
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="bullId">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" name="herd.id">
             <br>
-            <input class="big-checkbox form-control" type="checkbox" name="Miscarriage" value="Miscarriage"> Miscarriage
+            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="bull.id">
             <br>
-            <input class="big-checkbox form-control" type="checkbox" name="Pregnant" value="Pregnant"> Pregnant
+            <input ng-hide="checked" class="big-checkbox form-control" type="checkbox" name="Miscarriage" value="Miscarriage"> Miscarriage
+            <br>
+            <input ng-hide="checked" class="big-checkbox form-control" type="checkbox" name="Pregnant" value="Pregnant"> Pregnant
             <br>
             <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
         </form>

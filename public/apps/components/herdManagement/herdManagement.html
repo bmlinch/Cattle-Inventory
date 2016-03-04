@@ -5,5 +5,5 @@
 <button ng-click="addHerd(herd)">Add Herd</button>
 
 <div ng-repeat="herd in herds track by herd.id">
-    {{herd.name}}  
+    <a ui-sref="herdOverview({herdId:herd.id})">{{herd.name}}</a>  
 </div>

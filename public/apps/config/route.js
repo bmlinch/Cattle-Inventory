@@ -31,7 +31,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     
     .state('addBull',{
-        url:'/addBull', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
+        url:'/user/herdManagement/herd/:herdId/bull', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
         //do we need another page?
         templateUrl: '/public/apps/components/addBull/addBull.html',
         controller: 'AddBull',
@@ -39,7 +39,7 @@ app.config(function($stateProvider, $urlRouterProvider){
     })
     
     .state('addCow',{
-        url:'/farm/herds/:herdId/cows/',
+        url:'/user/herdManagement/herd/:herdId/cows/',
         templateUrl: '/public/apps/components/addCow/addCow.html',
         controller: 'AddCow',
         controllerAs: 'ac'
