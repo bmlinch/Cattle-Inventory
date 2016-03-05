@@ -77,7 +77,7 @@ app.config(function($stateProvider, $urlRouterProvider){
         url:'/herd/:herdId',
         templateUrl: '/public/apps/components/herdOverview/herdOverview.html',
         controller: 'HerdOverview',
-        controllerAs: 'HO'
+        controllerAs: 'ho'
     })
 });
 

@@ -4,20 +4,29 @@
 
         <h4>Add Bovine</h4>
         
-        <input type="checkbox" class="big-checkbox form-control" ng-model="checked"> Bull
+        <div>
+            <input type="checkbox" class="big-checkbox form-control" ng-model="checked"> 
+            <p>Bull</p>
+        </div>
         
-        <form name="addCowForm" ng-submit="ac.addCow()" method="post">
+        <form name="addCowForm" ng-submit="addCow()" method="post">
             <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Cow ID/Number" name="cow.id">
             <br>
-            <input ng-show="checked" class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" name="bull.id">
+            <input ng-show="checked" class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" name="herdBull.id">
             <br>
             <input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" name="herd.id">
             <br>
-            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="bull.id">
+            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="herdBull.id">
             <br>
-            <input ng-hide="checked" class="big-checkbox form-control" type="checkbox" name="Miscarriage" value="Miscarriage"> Miscarriage
+            <div ng-hide="checked">
+                <input class="big-checkbox form-control" type="checkbox" name="Miscarriage" value="Miscarriage">
+                <p>Miscarriage</p>
+            </div>
             <br>
-            <input ng-hide="checked" class="big-checkbox form-control" type="checkbox" name="Pregnant" value="Pregnant"> Pregnant
+            <div ng-hide="checked">
+                <input class="big-checkbox form-control" type="checkbox" name="Pregnant" value="Pregnant">
+                <p>Pregnant</p>
+            </div>
             <br>
             <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
         </form>
