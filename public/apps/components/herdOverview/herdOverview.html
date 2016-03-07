@@ -1,10 +1,15 @@
 <h1>Herd Overview ---{herd.name}</h1>
 
 
-<a ui-sref="addCow">Add Livestock</a>
+<a ng-click="addCow()">Add Livestock</a>
 
 
+<div>Cows</div>
+<div ng-repeat="cow in cows track by cow.id">
+    <a>{{cow.id}}</a>  
+</div>
 
-<div ng-repeat="cow in herd track by herd.id">
-    <a ui-sref="">{{cow.name}}</a>  
+<h3>Herd Bulls</h3>
+<div ng-repeat="bull in herdBulls track by bull.id">
+    <a>{{bull.id}}</a>  
 </div>

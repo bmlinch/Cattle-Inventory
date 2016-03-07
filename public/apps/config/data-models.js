@@ -3,6 +3,11 @@ app.factory('Models', function (DS) {
     return {
         User: User(),
         Herd: Herd(),
+        Cow: Cow(),
+        Bull: Bull(),
+        Tank: Tank(),
+        Canister: Canister(),
+        Cane: Cane()
         
     }
     
@@ -62,13 +67,13 @@ app.factory('Models', function (DS) {
                     }
                 },
                 hasMany:{
-                    cow: {
-                        localField: 'cows',
-                        foreignKey: 'herdId'
+                    cows: {
+                        localField: 'cow',
+                        foreignKey: 'cowId'
                     },
-                    bull: {
-                        localField: 'bulls',
-                        foreignKey: 'herdId'
+                    bulls: {
+                        localField: 'bull',
+                        foreignKey: 'bullId'
                     }
                 }
             }
@@ -138,8 +143,10 @@ app.factory('Models', function (DS) {
                     }
                 },
                 hasMany: {
-                    localField: 'canes',
-                    foreignKey: 'canisterId'
+                    canes: {
+                        localField: 'cane',
+                        foreignKey: 'canisterId'
+                    }
                 }
             }
         })
@@ -154,7 +161,6 @@ app.factory('Models', function (DS) {
                     canister:{
                         localField: 'canister',
                         localKey: 'canisterId'
-                        
                     }
                 }
             }

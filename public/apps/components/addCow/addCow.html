@@ -10,21 +10,19 @@
         </div>
         
         <form name="addCowForm" ng-submit="addCow()" method="post">
-            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Cow ID/Number" name="cow.id">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.id">
             <br>
-            <input ng-show="checked" class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" name="herdBull.id">
+            <!--<input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" ng-model="herd.id">-->
             <br>
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" name="herd.id">
-            <br>
-            <input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="herdBull.id">
+            <!--<input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="herdBull.id">-->
             <br>
             <div ng-hide="checked">
-                <input class="big-checkbox form-control" type="checkbox" name="Miscarriage" value="Miscarriage">
+                <input class="big-checkbox form-control" type="checkbox" ng-model="cow.miscarriage" value="Miscarriage">
                 <p>Miscarriage</p>
             </div>
             <br>
             <div ng-hide="checked">
-                <input class="big-checkbox form-control" type="checkbox" name="Pregnant" value="Pregnant">
+                <input class="big-checkbox form-control" type="checkbox" ng-model="cow.preggers" value="Pregnant">
                 <p>Pregnant</p>
             </div>
             <br>
