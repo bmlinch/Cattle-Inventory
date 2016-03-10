@@ -29,10 +29,10 @@ app.controller('AddCow', function($scope, Models, $stateParams){
 
 
 // Models.Herd.findAll()
-//     Models.Herd.bindAll({where:{userId: $rootScope.member.$id}}, $scope, "herds")
+//     Models.Herd.bindAll({where:{userId: $rootScope.member.id}}, $scope, "herds")
 
 //     $scope.addHerd = function () {
-//         $scope.herd.userId = $rootScope.member.$id
+//         $scope.herd.userId = $rootScope.member.id
 //         Models.Herd.create($scope.herd).then(function (herd) {
 //                    $rootScope.member.herds = $rootScope.member.herds || [];
 //                    $rootScope.member.herds.push(herd.id);

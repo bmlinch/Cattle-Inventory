@@ -1,54 +1,56 @@
 <html ng-app="CattleInventory">
+
 <head>
     <meta charset="UTF-8">
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport" />
     <title>Cattle Tracker</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="assets/styles/style.css">    
+    <link rel="stylesheet" href="assets/styles/style.css">
 </head>
-<body>
-   
-   
-   <!--Navbar With Links to Every Page-->
- <div class="navBar">
-    <div class="btn-group" uib-dropdown is-open="status.isopen" ng-if="member">
-        <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle
-        ng-disabled="disabled">
-            Menu <span class="caret"></span>
-        </button>
-        <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
-            <li role="menuitem"><a href="/#/addTank">Add Tank</a></li>
-            <!--<li role="menuitem"><a href="/#/">Specimen/cane Search</a></li>-->
-            <li role="menuitem"><a href="/#/cowSearch">Cow Search</a></li>
-            <li role="menuitem"><a href="/#/herdManagement">Herd Management</a></li>
-            <li role="menuitem"><a href="/#/logIn">Log In</a></li>
-            <li class="divider"></li>
-            <li role="menuitem"><a href="/#/mainPage">Home</a></li>
-        </ul>
-</div>
-</div>
-<br> 
-{{2+2}}
-<br>
-<ui-view></ui-view>
-    {{member}}
-    <!--JS Components-->
-    <script src="bower_components/angular/angular.min.js"></script>
-    <script src="bower_components/jquery/dist/jquery.min.js"></script>
-    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<body ng-controller="MainController">
+
+
+    <!--Navbar With Links to Every Page-->
+    <div class="navBar">
+        <div class="btn-group" uib-dropdown is-open="status.isopen" ng-if="member">
+            <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
+                Menu <span class="caret"></span>
+            </button>
+            <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
+                <li role="menuitem"><a href="/#/addTank/">Add Tank</a></li>
+                <!--<li role="menuitem"><a href="/#/">Specimen/cane Search</a></li>-->
+                <li role="menuitem"><a href="/#/cowSearch/">Cow Search</a></li>
+                <li role="menuitem"><a href="/#/herdManagement">Herd Management</a></li>
+                <li role="menuitem"><a href="/#/logIn">Log In</a></li>
+                <li class="divider"></li>
+                <li role="menuitem"><a href="/#/mainPage">Home</a></li>
+            </ul>
+        </div>
+    </div>
+    <br>
+    <br>
+    <firebase-auth auth="onAuthCallback" unauth="unauthCallback" ng-if="!member"></firebase-auth>
+    <ui-view></ui-view>
+
+    <!--Load Libraries-->
+    <!--<script src="bower_components/jquery/dist/jquery.js"></script>-->
+    <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/firebase/firebase.js"></script>
-    <script src="bower_components/angularfire/dist/angularfire.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/1.2.4/ui-bootstrap-tpls.min.js"></script>
     <script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-    <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
     <script src="bower_components/js-data/dist/js-data.js"></script>
     <script src="bower_components/js-data-firebase/dist/js-data-firebase.js"></script>
-    <script src="bower_components/js-data-angular/dist/js-data-angular.js"></script>    
+    <script src="bower_components/js-data-angular/dist/js-data-angular.js"></script>
+    <script src="bower_components/js-data-firebaseauth-angular/auth-component.js"></script>
 
+    <!--You can customize the User Model as needed-->
+    <script src="bower_components/js-data-firebaseauth-angular/user-model.js"></script>
+    
     <!--Custom Application-->
-    <script src="main-controller.js"></script>    
+    <script src="main-controller.js"></script>
     <script src="public/apps/config/route.js"></script>
-       <script src="public/apps/components/simplePage/simple.js"></script>
     <script src="public/apps/components/addBull/addBull.js"></script>
     <script src="public/apps/components/addCow/addCow.js"></script>
     <script src="public/apps/components/addTank/addTank.js"></script>
@@ -59,10 +61,11 @@
     <script src="public/apps/components/mainPage/mainPage.js"></script>
     <script src="public/apps/components/herdOverview/herdOverview.js"></script>
     <script src="public/apps/components/searchPage/searchPage.js"></script>
-    <script src="public/apps/components/herdManagement/herdManagement.js"></script>    
+    <script src="public/apps/components/herdManagement/herdManagement.js"></script>
     <script src="public/apps/components/loginPage/constants.js"></script>
     <script src="public/apps/config/data-adapter.js"></script>
     <script src="public/apps/config/data-models.js"></script>
 
 </body>
+
 </html>

@@ -1,17 +1,17 @@
 app.config(function ($stateProvider, $urlRouterProvider) {
-    $urlRouterProvider.otherwise('/simple')
+    // $urlRouterProvider.otherwise('/logIn')
     // farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId
-    $stateProvider
-        .state('simple',{
-            url: '/simple',
-            controller: "SimpleController",
-            templateUrl: '/public/apps/components/simplePage/simple.html',
-        })
+     $stateProvider
+    //     .state('simple',{
+    //         url: '/simple',
+    //         controller: "SimpleController",
+    //         templateUrl: '/public/apps/components/simplePage/simple.html',
+    //     })
         .state('logIn', {
             url: '/logIn',
             templateUrl: '/public/apps/components/loginPage/logIn.html',
-            controller: 'LoginController',
-            controllerAs: 'li'
+            // controller: 'LoginController',
+            // controllerAs: 'li'
         })
 
         .state('mainPage', {
@@ -37,7 +37,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
 
         .state('addBull', {
-            url: '/user/herdManagement/herd/:herdId/bull', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
+            url: '/tank/:tankId/canister/:canisterId', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
             //do we need another page?
             templateUrl: '/public/apps/components/addBull/addBull.html',
             controller: 'AddBull',
@@ -87,63 +87,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
 });
 
-app.run(function ($rootScope, AuthService, Models) {
-
-    $rootScope.member = {
-        email: "j@j.com",
-        herds: [
-            {
-                name: "Herd 1",
-                cows: [
-                    {
-                        name: "Cow 1",
-                        preggers: true,
-                    }
-                ],
-                bulls:[
-                    {
-                        name: "Bull 1",
-                    }
-                ]
-            }
-        ],
-        tanks: [
-            {
-                name: "Tank 1",
-                canisters: [
-                    {
-                        name: "Canister 1",
-                        canes: [
-                            {
-                                name: "cane 1",
-                                units: 0
-                            },
-                            {
-                                name: "cane 2",
-                                units: 5
-                            }
-                        ]
-                    },
-                    {
-                        name: "Canister 2",
-                        canes: [
-                            {
-                                name: "cane 1",
-                                units: 8
-                            },
-                            {
-                                name: "cane 2",
-                                units: 12
-                            }
-                        ]
-                    }
-                ]
-            }
-        ]
-    }
-    // $rootScope.$on('$stateChangeStart', function(){
-    //     if (!$rootScope.member){
-    //         AuthService.authMember();
-    //     }
-    // })
-})
+//  app.run(function ($rootScope, AuthService, Models) {
+//     $rootScope.$on('$stateChangeStart', function(){
+//         if (!$rootScope.member){
+//             AuthService.authMember();
+//         }
+//     })
+// })

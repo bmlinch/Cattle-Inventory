@@ -1,12 +1,22 @@
 var app = angular.module('CattleInventory', [
     'ui.router',
     'ui.bootstrap',
-    'firebase',
-    'js-data',
-    // 'js-data-firebase'
-    ])
+    'jsData.firebaseAuth',
+    'js-data'
+])
 
-app.controller('MainController', function($scope){
+app.controller('MainController', function ($scope, $state) {
+    $scope.onAuthCallback = function (error, memberData) {
+        if (error) {
+            //CUSTOM ERROR HANDLER
+            return console.log(error);
+        }
+        console.log(memberData);
+        $state.go('mainPage');
+    };
 
+    $scope.unauthCallback = function () {
+        $state.go('logIn');
+    }
 })
 

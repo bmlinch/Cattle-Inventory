@@ -1,10 +1,9 @@
-
 <!--Add/Edit dynamically added with each item created-->
 <div class="panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
     <div class="panel-body text-center">
         <h4>Canister Management</h4>
         <form name="addCanisterForm" ng-submit="addCanister()" method="post">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Canister ID/Number" ng-model="canister.id">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="Canister ID/Number" ng-model="canister.num">
             <br>
             <input class="input-md form-control inputSpacing" type="number" placeholder="Number of Canes" ng-model="canister.canes">
             <br>
@@ -12,7 +11,17 @@
         </form>
     </div>
 </div>
-<div ng-repeat="canister in canisters track by canister.id">
-        <a ui-sref="canisterPage({canisterId:canister.id})">{{canister.id}}{{canister.canes}}</a>  
-    </div>
+<div class="" ng-repeat="canister in tank.canisters track by $index">
+    <div class="">
+        <a ui-sref="addBull({tankId: tankId, canisterId:$index})">{{canister.num}}{{canister.canes}}</a>
+        <button type="button" class="btn btn-large btn-default" ng-click="canister.showCaneForm = !canister.showCaneForm">Add Cane</button>
+        <div ng-if="canister.showCaneForm">
+            <input type="text" ng-model="canister.newCane.name">
+            <button type="button" class="btn btn-large btn-default" ng-click="addCane(canister, canister.newCane)">add</button>
+        </div>
 
+        <div ng-repeat="cane in canister">
+            {{cane}}
+        </div>
+    </div>
+</div>
