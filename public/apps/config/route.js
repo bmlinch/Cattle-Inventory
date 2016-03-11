@@ -29,17 +29,17 @@ app.config(function ($stateProvider, $urlRouterProvider) {
         })
 
 
-        .state('tankOverview', {
-            url: '/user/tankOverview/:tankId', //farm/tanks/tankId/canisters/ this page adds the canisterId
-            templateUrl: '/public/apps/components/tankOverview/tankOverview.html',
+        .state('addCanister', {
+            url: '/user/addCanister/:tankId', //farm/tanks/tankId/canisters/ this page adds the canisterId
+            templateUrl: '/public/apps/components/addCanister/addCanister.html',
             controller: 'TankOverview',
             controllerAs: 'to'
         })
 
-        .state('addBull', {
+        .state('addSpecimen', {
             url: '/tank/:tankId/canister/:canisterId', //farm/tanks/:tankId/canisters/:canisterId/canes/:caneId/:specimenId // this page adds the cane Id?
             //do we need another page?
-            templateUrl: '/public/apps/components/addBull/addBull.html',
+            templateUrl: '/public/apps/components/addSpecimen/addSpecimen.html',
             controller: 'AddBull',
             controllerAs: 'ab'
         })
@@ -71,10 +71,10 @@ app.config(function ($stateProvider, $urlRouterProvider) {
             controller: 'BullSearch',
             controllerAs: 'bs'
         })
-
-        .state('herdManagement', {
-            url: '/herdManagement',
-            templateUrl: 'public/apps/components/herdManagement/herdManagement.html',
+///user/tankOverview/:tankId
+        .state('addHerd', {
+            url: '/addHerd',
+            templateUrl: 'public/apps/components/addHerd/addHerd.html',
             controller: 'HerdManagement',
             controllerAs: 'hm'
         })

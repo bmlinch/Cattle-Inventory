@@ -4,12 +4,10 @@
         <form name="addTankForm" ng-submit="addTank()">
             <input class="input-md form-control inputSpacing" type="text" placeholder="Tank ID/Number" ng-model="tank.num">
             <br>
-            <input class="input-md form-control inputSpacing" type="number" placeholder="Number of Canister" ng-model="canister.num">
-            <br>
             <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
         </form>
     </div>
     <div ng-repeat="tank in tanks track by tank.id">
-        <a ui-sref="tankOverview({tankId:tank.id})">{{tank.num}}</a>
+        <a ui-sref="addCanister({tankId:tank.id})">{{tank.num}}</a>
     </div>
 </div>

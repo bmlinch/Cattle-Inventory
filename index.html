@@ -11,12 +11,13 @@
 
 <body ng-controller="MainController">
 
+<!--glyphicon glyphicon-menu-hamburger-->
+
 
     <!--Navbar With Links to Every Page-->
     <div class="navBar">
         <div class="btn-group" uib-dropdown is-open="status.isopen" ng-if="member">
-            <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled">
-                Menu <span class="caret"></span>
+            <button id="single-button" type="button" class="btn btn-default" uib-dropdown-toggle ng-disabled="disabled"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
             <ul uib-dropdown-menu role="menu" aria-labelledby="single-button">
                 <li role="menuitem"><a href="/#/addTank/">Add Tank</a></li>
@@ -51,17 +52,17 @@
     <!--Custom Application-->
     <script src="main-controller.js"></script>
     <script src="public/apps/config/route.js"></script>
-    <script src="public/apps/components/addBull/addBull.js"></script>
+    <script src="public/apps/components/addSpecimen/addSpecimen.js"></script>
     <script src="public/apps/components/addCow/addCow.js"></script>
     <script src="public/apps/components/addTank/addTank.js"></script>
     <script src="public/apps/components/bullSearch/bullSearch.js"></script>
-    <script src="public/apps/components/tankOverview/tankOverview.js"></script>
+    <script src="public/apps/components/addCanister/addCanister.js"></script>
     <script src="public/apps/components/cowSearch/cowSearch.js"></script>
     <script src="public/apps/components/loginPage/logIn.js"></script>
     <script src="public/apps/components/mainPage/mainPage.js"></script>
     <script src="public/apps/components/herdOverview/herdOverview.js"></script>
     <script src="public/apps/components/searchPage/searchPage.js"></script>
-    <script src="public/apps/components/herdManagement/herdManagement.js"></script>
+    <script src="public/apps/components/addHerd/addHerd.js"></script>
     <script src="public/apps/components/loginPage/constants.js"></script>
     <script src="public/apps/config/data-adapter.js"></script>
     <script src="public/apps/config/data-models.js"></script>

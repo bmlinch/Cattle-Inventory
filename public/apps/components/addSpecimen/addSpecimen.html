@@ -3,10 +3,10 @@
     <div class="panel-body text-center">
 
         <h4>Add/Edit Bull</h4>
-        <form name="addBullForm" ng-submit="addBull()" method="post">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" ng-model="cane.bull">
+        <form name="addBullForm" ng-submit="addCane()">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" ng-model="cane.bullId">
             <br>
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Cane ID/Number" ng-model="cane.id">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="Cane ID/Number" ng-model="cane.num">
             <br>
             <input class="input-md form-control inputSpacing" type="number" placeholder="Number of Units" ng-model="cane.units">
             <br>

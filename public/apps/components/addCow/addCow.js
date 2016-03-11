@@ -1,31 +1,43 @@
-app.controller('AddCow', function($scope, Models, $stateParams){
-    // Adds cow to the Database
-    Models.Cow.findAll();
-    Models.Cow.bindAll({where:{herdId: $stateParams.herdId}}, $scope, "cows")
-    Models.Herd.findAll();
+app.controller('AddCow', function($rootScope, $scope, Models, $stateParams){
+    $scope.herdId = $stateParams.herdId;
+    Models.Herd.findAll()
     Models.Herd.bindOne($stateParams.herdId, $scope, "herd")
     
-    $scope.addCow = function(){
-        $scope.cow.herdId = $stateParams.herdId
-        
-        if($scope.checked){
-            Models.Bull.create($scope.cow).then(function (bull){
-                $scope.herd.herdBulls = $scope.herd.herdBulls || {};
-                $scope.herd.herdBulls[bull.id]= bull.id;
-                $scope.herd.DSSave();
-            })
-        }else{
-            Models.Cow.create($scope.cow).then(function (cow) {
-                $scope.herd.cows = $scope.herd.cows || {};
-                $scope.herd.cows[cow.id]= cow.id;
-                $scope.herd.DSSave();
-            });
+    $scope.addCow = function () {
+        if(!$scope.herd.cows){
+            $scope.herd.cows = [];
         }
+        $scope.cow.herdId = $stateParams.herdId;
+        $scope.herd.cows.push($scope.cow);
+        $scope.herd.DSSave();
         $scope.cow = ''
-    }
-    
+    }   
 });
 
+    // Adds cow to the Database
+    // Models.Cow.findAll();
+    // Models.Cow.bindAll({where:{herdId: $stateParams.herdId}}, $scope, "cows")
+    // Models.Herd.findAll();
+    // Models.Herd.bindOne($stateParams.herdId, $scope, "herd")
+    
+    // $scope.addCow = function(){
+    //     $scope.cow.herdId = $stateParams.herdId
+        
+    //     if($scope.checked){
+    //         Models.Bull.create($scope.cow).then(function (bull){
+    //             $scope.herd.herdBulls = $scope.herd.herdBulls || {};
+    //             $scope.herd.herdBulls[bull.id]= bull.id;
+    //             $scope.herd.DSSave();
+    //         })
+    //     }else{
+    //         Models.Cow.create($scope.cow).then(function (cow) {
+    //             $scope.herd.cows = $scope.herd.cows || {};
+    //             $scope.herd.cows[cow.id]= cow.id;
+    //             $scope.herd.DSSave();
+    //         });
+    //     }
+    //     $scope.cow = ''
+    // }
 
 
 // Models.Herd.findAll()

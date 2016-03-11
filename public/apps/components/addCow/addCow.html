@@ -9,8 +9,8 @@
             <p>Bull</p>
         </div>
         
-        <form name="addCowForm" ng-submit="addCow()" method="post">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.id">
+        <form name="addCowForm" ng-submit="addCow()">
+            <input class="input-md form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.num">
             <br>
             <!--<input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" ng-model="herd.id">-->
             <br>
@@ -29,5 +29,9 @@
             <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
         </form>
 
+    </div>
+    <div ng-repeat="cow in herd track by $index">
+        <!--<a ui-sref="tankOverview({tankId:tank.id})">{{cow.num}}</a>-->
+        <span>{{cow.num}}</span>
     </div>
 </div>

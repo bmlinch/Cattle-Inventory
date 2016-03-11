@@ -12,10 +12,10 @@ app.controller('TankOverview', function($rootScope, $scope, $stateParams, Models
         $scope.tank.DSSave();
     } 
     
-    $scope.addCane = function (canister, newCane) {
-        canister.canes = canister.canes || [];
-        canister.canes.push(newCane);
-        $scope.tank.DSSave();
-    }
+    // $scope.addCane = function (canister, newCane) {
+    //     canister.canes = canister.canes || [];
+    //     canister.canes.push(newCane);
+    //     $scope.tank.DSSave();
+    // }
 });
 
