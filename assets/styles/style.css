@@ -1,5 +1,7 @@
 body{
     background-color: #3E3D3D;
+    
+    
 }
 .big-checkbox {
     width: 20px;
@@ -31,3 +33,10 @@ body{
 }
 .nbCenter{
     margin: 10px 0px 0px 10px;
+}
+.logo{
+    font-family: 'Quicksand', sans-serif;
+}
+[ng\:cloak], [ng-cloak], .ng-cloak {
+    display: none;
+}

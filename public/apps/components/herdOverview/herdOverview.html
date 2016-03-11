@@ -1,15 +1,16 @@
-<h1>Herd Overview ---{herd.name}</h1>
+<h1 class="LightColor">{{herd.name}}</h1>
 
 
-<a ng-click="addCow()">Add Livestock</a>
+<button type="button" class="btn classyButton"ng-click="addCow()">Add Livestock</button>
 
 
-<p>Cows</p>
+
+<h4 class="LightColor">Cows</h4>
 <div ng-repeat="cow in cows track by cow.id">
-    <a>{{cow.id}}</a>  
+    <a class="LightColors">{{cow.id}}</a>  
 </div>
 
-<p>Herd Bulls</p>
+<h4 class="LightColor">Herd Bulls</h4>
 <div ng-repeat="bull in herdBulls track by bull.id">
-    <a>{{bull.id}}</a>  
+    <a class="LightColors">{{bull.id}}</a>  
 </div>

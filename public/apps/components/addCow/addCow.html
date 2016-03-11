@@ -1,37 +1,25 @@
-
-<div class="panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
-    <div class="panel-body text-center">
-
-        <h4>Add Bovine</h4>
-        
-        <div>
-            <input type="checkbox" class="big-checkbox form-control" ng-model="checked"> 
-            <p>Bull</p>
-        </div>
-        
-        <form name="addCowForm" ng-submit="addCow()">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.num">
-            <br>
-            <!--<input class="input-md form-control inputSpacing" type="text" placeholder="Herd Name/Number" ng-model="herd.id">-->
-            <br>
-            <!--<input ng-hide="checked" class="input-md form-control inputSpacing" type="text" placeholder="Impregnated By" name="herdBull.id">-->
-            <br>
-            <div ng-hide="checked">
-                <input class="big-checkbox form-control" type="checkbox" ng-model="cow.miscarriage" value="Miscarriage">
-                <p>Miscarriage</p>
-            </div>
-            <br>
-            <div ng-hide="checked">
-                <input class="big-checkbox form-control" type="checkbox" ng-model="cow.preggers" value="Pregnant">
-                <p>Pregnant</p>
-            </div>
-            <br>
-            <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
-        </form>
-
+<h4 class="LightColor">Add Bovine</h4>
+<div>
+    <input type="checkbox" class="big-checkbox form-control" ng-model="checked">
+    <p class="LightColor">Bull</p>
+</div>
+<form name="addCowForm" ng-submit="addCow()">
+    <input class="input-md inputField form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.num">
+    <br>
+    <div ng-hide="checked">
+        <input class="big-checkbox form-control" type="checkbox" ng-model="cow.miscarriage" value="Miscarriage">
+        <p class="LightColor">Miscarriage</p>
     </div>
-    <div ng-repeat="cow in herd track by $index">
-        <!--<a ui-sref="tankOverview({tankId:tank.id})">{{cow.num}}</a>-->
-        <span>{{cow.num}}</span>
+    <br>
+    <div ng-hide="checked">
+        <input class="big-checkbox form-control" type="checkbox" ng-model="cow.preggers" value="Pregnant">
+        <p class="LightColor">Pregnant</p>
     </div>
+    <br>
+    <input class="btn classyButton btn-md buttonSpacing" type="submit" value="Submit">
+</form>
+
+
+<div ng-repeat="cow in herd track by $index">
+    <span class="LightColor">{{cow.num}}</span>
 </div>

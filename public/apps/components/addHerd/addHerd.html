@@ -1,9 +1,9 @@
-<h1>Herd Management</h1>
+<h1 class="LightColor">Herd Management</h1>
 
-<input class="form-control" ng-model="herd.name" type="text"/>
+<input class="form-control inputField" ng-model="herd.name" type="text"/>
 <br/>
-<button ng-click="addHerd(herd)">Add Herd</button>
+<button class="classyButton" ng-click="addHerd(herd)">Add Herd</button>
 
 <div ng-repeat="herd in herds track by herd.id">
-    <a ui-sref="herdOverview({herdId:herd.id})">{{herd.name}}</a>  
+    <a class="LightColor" ui-sref="herdOverview({herdId:herd.id})">{{herd.name}}</a>  
 </div>

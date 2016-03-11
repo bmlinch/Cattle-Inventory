@@ -6,10 +6,11 @@
     <title>Cattle Tracker</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Quicksand' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="assets/styles/style.css">
 </head>
 
-<body ng-controller="MainController">
+<body ng-cloak ng-controller="MainController">
 
 <!--glyphicon glyphicon-menu-hamburger-->
 
@@ -27,8 +28,10 @@
                 <li role="menuitem"><a href="/#/logIn">Log In</a></li>
                 <li class="divider"></li>
                 <li role="menuitem"><a href="/#/mainPage">Home</a></li>
+                <li role="menuitem"><a>Log Out</a></li>
             </ul>
         </div>
+        <h3 class="logo LightColor navbar-brand">Cattle Tracker</h3>
     </div>
     <br>
     <br>
@@ -51,6 +54,7 @@
     
     <!--Custom Application-->
     <script src="main-controller.js"></script>
+    <script src="constants.js"></script>
     <script src="public/apps/config/route.js"></script>
     <script src="public/apps/components/addSpecimen/addSpecimen.js"></script>
     <script src="public/apps/components/addCow/addCow.js"></script>
@@ -58,12 +62,10 @@
     <script src="public/apps/components/bullSearch/bullSearch.js"></script>
     <script src="public/apps/components/addCanister/addCanister.js"></script>
     <script src="public/apps/components/cowSearch/cowSearch.js"></script>
-    <script src="public/apps/components/loginPage/logIn.js"></script>
     <script src="public/apps/components/mainPage/mainPage.js"></script>
     <script src="public/apps/components/herdOverview/herdOverview.js"></script>
     <script src="public/apps/components/searchPage/searchPage.js"></script>
     <script src="public/apps/components/addHerd/addHerd.js"></script>
-    <script src="public/apps/components/loginPage/constants.js"></script>
     <script src="public/apps/config/data-adapter.js"></script>
     <script src="public/apps/config/data-models.js"></script>
 
