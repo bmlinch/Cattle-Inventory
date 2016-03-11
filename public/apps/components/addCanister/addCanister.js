@@ -10,6 +10,7 @@ app.controller('TankOverview', function($rootScope, $scope, $stateParams, Models
         $scope.canister.tankId = $stateParams.tankId;
         $scope.tank.canisters.push($scope.canister);
         $scope.tank.DSSave();
+        $scope.canister = '';
     } 
     
     // $scope.addCane = function (canister, newCane) {

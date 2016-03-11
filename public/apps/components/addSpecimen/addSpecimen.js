@@ -7,13 +7,6 @@ app.controller('AddBull', function($rootScope, $scope, $stateParams, Models){
         $scope.tank.canisters[i].canes = $scope.tank.canisters[i].canes || [];
         $scope.tank.canisters[i].canes.push($scope.cane);
         $scope.tank.DSSave();
+        $scope.cane = '';
     } 
 });
-
-
-//  JAkes Solution
-//    $scope.addCane = function (canister, newCane) {
-//         canister.canes = canister.canes || [];
-//         canister.canes.push(newCane);
-//         $scope.tank.DSSave();
-//     }

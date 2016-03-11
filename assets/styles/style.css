@@ -1,7 +1,5 @@
 body{
-    background-color: #3E3D3D;
-    
-    
+    background-color: #3E3D3D;   
 }
 .big-checkbox {
     width: 20px;
@@ -39,4 +37,10 @@ body{
 }
 [ng\:cloak], [ng-cloak], .ng-cloak {
     display: none;
+}
+.floatRight{
+    float: right;
+}
+#single-button{
+    margin-left: 10px;
 }

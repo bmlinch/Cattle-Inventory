@@ -1,4 +1,4 @@
-app.controller('AddCow', function($rootScope, $scope, Models, $stateParams){
+app.controller('AddCow', function($rootScope, $state, $scope, Models, $stateParams){
     $scope.herdId = $stateParams.herdId;
     Models.Herd.findAll()
     Models.Herd.bindOne($stateParams.herdId, $scope, "herd")
@@ -10,7 +10,8 @@ app.controller('AddCow', function($rootScope, $scope, Models, $stateParams){
         $scope.cow.herdId = $stateParams.herdId;
         $scope.herd.cows.push($scope.cow);
         $scope.herd.DSSave();
-        $scope.cow = ''
+        $scope.cow = '';
+        $state.go("herdOverview");
     }   
 });
 
