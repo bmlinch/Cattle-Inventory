@@ -1,19 +1,10 @@
-<!--Add/Edit dynamically added with each item created-->
-<div class="panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
-    <div class="panel-body text-center">
-        <h4>Canister Management</h4>
-        <form name="addCanisterForm" ng-submit="addCanister()" method="post">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Canister ID/Number" ng-model="canister.num">       
-            <br>
-            <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
-        </form>
-    </div>
-</div>
-<div class="" ng-repeat="canister in tank.canisters track by $index">
-    <div class="">
-        <a ui-sref="addSpecimen({tankId: tankId, canisterId:$index})">{{canister.num}}{{canister.canes}}</a>
-        <div ng-repeat="cane in canister">
-            {{cane}}
-        </div>
-    </div>
+<h4 class="LightColor">Canister Management</h4>
+<form name="addCanisterForm" ng-submit="addCanister()" method="post">
+    <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Canister ID/Number" ng-model="canister.num">
+    <br>
+    <input class="btn classyButton btn-md buttonSpacing" type="submit" value="Submit">
+</form>
+<h4 class="LightColor">Tank: {{tank.num}}</h4>
+<div ng-repeat="canister in tank.canisters track by $index">
+    <a class="LightColor" ui-sref="addSpecimen({tankId: tankId, canisterId:$index})">{{canister.num}}</a>
 </div>

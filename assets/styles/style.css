@@ -12,15 +12,22 @@ body{
     position: fixed;
     z-index:1;
 }
-a{
-    color: white;
+.LightColor{
+    color: whitesmoke;
+    margin-left: 20px;
 }
 .classyButton{
     background: linear-gradient(to right, #35D4A0, #39AECF);
     width: 90%;
     margin: 10px;
-   
 }
-.poi{
+.inputField{
+    width: 90%;
+    background-color: silver;
+    margin: 10px;
+}
+.mpMargin{
     margin-top: 50%;
 }
+.nbCenter{
+    margin: 10px 0px 0px 10px;

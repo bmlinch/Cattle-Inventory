@@ -1,17 +1,16 @@
+<h4 class="LightColor">Add Specimen</h4>
 
-<div class="panel col-xs-10 col-xs-offset-1 col-sm-4 col-sm-offset-4" id="panelBackground">
-    <div class="panel-body text-center">
-
-        <h4>Add/Edit Bull</h4>
-        <form name="addBullForm" ng-submit="addCane()">
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Bull ID/Number" ng-model="cane.bullId">
-            <br>
-            <input class="input-md form-control inputSpacing" type="text" placeholder="Cane ID/Number" ng-model="cane.num">
-            <br>
-            <input class="input-md form-control inputSpacing" type="number" placeholder="Number of Units" ng-model="cane.units">
-            <br>
-            <input class="btn btn-md buttonSpacing" type="submit" value="Submit">
-        </form>
-
-    </div>
-</div>
+<form name="addBullForm" ng-submit="addCane()">
+    <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Bull ID/Number" ng-model="cane.bullId">
+    <br>
+    <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Cane ID/Number" ng-model="cane.num">
+    <br>
+    <input class="input-md inputField form-control inputSpacing" type="number" placeholder="Number of Units" ng-model="cane.units">
+    <br>
+    <input class="btn btn-md classyButton buttonSpacing" type="submit" value="Submit">
+</form>
+<!--<div ng-repeat="cane in tank.canister.canes track by $index">
+    <ul>
+        <li>{{cane.bullId}}</li>
+    </ul>
+</div>-->
