@@ -7,7 +7,7 @@ body{
 .emblem{
     width: 150px;
     height: 150px;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
 }
 .big-checkbox {
     width: 20px;
@@ -28,8 +28,10 @@ body{
 .classyButton{
     background: linear-gradient(to right, #37DB79, #39AECF);
     width: 90%;
-    margin: 5%;
+    margin: 2.5%;
+    height: 50px;
     border: 1px solid black;
+    /*max-width: 300px;*/
     /*#35D4A0*/
 }
 .inputField{
