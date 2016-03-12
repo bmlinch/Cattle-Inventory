@@ -1,6 +1,14 @@
 body{
     background-color: #3E3D3D;   
 }
+.panel{
+    background-color: #3E3D3D;
+}
+.emblem{
+    width: 150px;
+    height: 150px;
+    margin-bottom: 50px;
+}
 .big-checkbox {
     width: 20px;
     height: 20px;
@@ -20,6 +28,7 @@ body{
     background: linear-gradient(to right, #35D4A0, #39AECF);
     width: 90%;
     margin: 10px;
+    border: 1px solid black;
 }
 .inputField{
     width: 90%;
@@ -27,7 +36,7 @@ body{
     margin: 10px;
 }
 .mpMargin{
-    margin-top: 50%;
+    margin-top: 10%;
 }
 .nbCenter{
     margin: 10px 0px 0px 10px;

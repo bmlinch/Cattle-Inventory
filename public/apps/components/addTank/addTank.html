@@ -4,6 +4,9 @@
     <br>
     <input class="btn btn-md classyButton" type="submit" value="Submit">
 </form>
-<div ng-repeat="tank in tanks track by tank.id">
-    <a class="LightColor" ui-sref="addCanister({tankId:tank.id})">{{tank.num}}</a>
+
+<div class="panel panel-default" ng-repeat="tank in tanks track by tank.id">
+    <div class="panel-body">
+        <a class="LightColor" ui-sref="addCanister({tankId:tank.id})">{{tank.num}}</a>
+    </div>
 </div>

@@ -9,8 +9,14 @@
     <br>
     <input class="btn btn-md classyButton buttonSpacing" type="submit" value="Submit">
 </form>
-<!--<div ng-repeat="cane in tank.canister.canes track by $index">
+<div class="panel panel-default" ng-repeat="sample in tank.canisters[i].canes track by $index">
+    <div class="panel-body">
+        <span>{{sample.bullId}}</span>
+    </div>
+</div>
+
+<!--<div ng-repeat="sample in tank.canisters[i].canes track by $index">
     <ul>
-        <li>{{cane.bullId}}</li>
+        <li>{{sample.bullId}}</li>
     </ul>
 </div>-->
