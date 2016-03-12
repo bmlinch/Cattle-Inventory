@@ -5,7 +5,8 @@
 <button class="classyButton btn btn-md buttonSpacing" ng-click="addHerd(herd)">Add</button>
 
 <div class="panel panel-default" ng-repeat="herd in herds track by herd.id">
-    <div class="panel-body">
-        <a class="LightColor" ui-sref="herdOverview({herdId:herd.id})">{{herd.name}}</a>
-    </div>
+    <a class="LightColor" ui-sref="herdOverview({herdId:herd.id})">{{herd.name}}
+        <div class="panel-body">
+        </div>
+    </a>
 </div>

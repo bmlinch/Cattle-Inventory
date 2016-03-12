@@ -12,6 +12,7 @@ body{
 .big-checkbox {
     width: 20px;
     height: 20px;
+    margin-left: 25px !important;
     }
 .navBar{
     height: 15px !important;
@@ -25,15 +26,16 @@ body{
     margin-left: 20px;
 }
 .classyButton{
-    background: linear-gradient(to right, #35D4A0, #39AECF);
+    background: linear-gradient(to right, #37DB79, #39AECF);
     width: 90%;
-    margin: 10px;
+    margin: 5%;
     border: 1px solid black;
+    /*#35D4A0*/
 }
 .inputField{
     width: 90%;
     background-color: silver;
-    margin: 10px;
+    margin: 5%;
 }
 .mpMargin{
     margin-top: 10%;
@@ -52,4 +54,11 @@ body{
 }
 #single-button{
     margin-left: 10px;
+}
+.authInput{
+    background-color: silver;   
+}
+.input-group{
+    width: 90%;
+    margin: 5%;
 }

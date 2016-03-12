@@ -6,7 +6,8 @@
 </form>
 
 <div class="panel panel-default" ng-repeat="tank in tanks track by tank.id">
-    <div class="panel-body">
-        <a class="LightColor" ui-sref="addCanister({tankId:tank.id})">{{tank.num}}</a>
-    </div>
+    <a class="LightColor" ui-sref="addCanister({tankId:tank.id})">{{tank.num}}
+        <div class="panel-body">
+        </div>
+    </a>
 </div>

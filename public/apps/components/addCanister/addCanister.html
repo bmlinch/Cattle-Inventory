@@ -1,12 +1,14 @@
-<h4 class="LightColor">Canister Management</h4>
+<h4 class="LightColor">Add Canister</h4>
 <form name="addCanisterForm" ng-submit="addCanister()" method="post">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Canister ID/Number" ng-model="canister.num">
     <br>
     <input class="btn classyButton btn-md buttonSpacing" type="submit" value="Submit">
 </form>
+
 <h4 class="LightColor">Tank: {{tank.num}}</h4>
 <div class="panel panel-default" ng-repeat="canister in tank.canisters track by $index">
-    <div class="panel-body">
-        <a class="LightColor" ui-sref="addSpecimen({tankId: tankId, canisterId:$index})">{{canister.num}}</a>
-    </div>
+    <a class="LightColor" ui-sref="addSpecimen({tankId: tankId, canisterId:$index})">{{canister.num}}
+        <div class="panel-body">
+        </div>
+    </a>
 </div>
