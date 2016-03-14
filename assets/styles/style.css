@@ -28,9 +28,13 @@ body{
 .classyButton{
     background: linear-gradient(to right, #37DB79, #39AECF);
     width: 90%;
-    margin: 2.5%;
+    margin: 5%;
     height: 50px;
     border: 1px solid black;
+    color: black;
+    font-weight: bolder;
+    font-size: large;
+   
     /*max-width: 300px;*/
     /*#35D4A0*/
 }
@@ -38,6 +42,7 @@ body{
     width: 90%;
     background-color: silver;
     margin: 5%;
+    height: 50px;
 }
 .mpMargin{
     margin-top: 10%;
@@ -53,12 +58,14 @@ body{
 }
 .floatRight{
     float: right;
+    margin-right: 10px;
 }
 #single-button{
     margin-left: 10px;
 }
 .authInput{
-    background-color: silver;   
+    background-color: silver;
+    height: 50px;   
 }
 .input-group{
     width: 90%;

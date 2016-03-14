@@ -5,7 +5,7 @@ var app = angular.module('CattleInventory', [
     'js-data'
 ])
 
-app.controller('MainController', function ($scope, $state) {
+app.controller('MainController', function ($scope, $state, AuthService) {
     $scope.onAuthCallback = function (error, memberData) {
         if (error) {
             //CUSTOM ERROR HANDLER
@@ -17,6 +17,9 @@ app.controller('MainController', function ($scope, $state) {
 
     $scope.unauthCallback = function () {
         $state.go('logIn');
+    }
+    $scope.logout = function(){
+        AuthService.logout();
     }
 })
 
