@@ -7,7 +7,7 @@
 
 <h4 class="LightColor">Tank: {{tank.num}}</h4>
 <div class="panel panel-default" ng-repeat="canister in tank.canisters track by $index">
-    <a class="LightColor" ui-sref="addSpecimen({tankId: tankId, canisterId:$index})">{{canister.num}}
+    <a class="LightColor" ui-sref="addSpecimen({tankId: tank.id, canisterId:$index})">{{canister.num}}
         <div class="panel-body">
         </div>
     </a>

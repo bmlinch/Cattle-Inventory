@@ -9,11 +9,11 @@
     <br>
     <input class="btn btn-md classyButton buttonSpacing" type="submit" value="Submit">
 </form>
-<div class="panel panel-default" ng-repeat="canister in tank.canisters track by $index">
+<div class="panel panel-default">
     <div class="panel-body">
-        <span class="LightColor">Canister: {{canister.num}}</span>
-        <div class="list-group" ng-repeat="cane in canister.canes track by $index">
-            <div class="list-group-item">{{cane.bullId}} {{cane.units}}</div>
+        
+        <div class="list-group" ng-repeat="cane in myTank.canes track by $index">
+            <div class="list-group-item">{{cane.bullId}}</div>
         </div>
     </div>
 </div>

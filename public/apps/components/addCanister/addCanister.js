@@ -1,6 +1,6 @@
 app.controller('TankOverview', function($rootScope, $scope, $stateParams, Models){
     $scope.tankId = $stateParams.tankId;
-    Models.Tank.findAll()
+    Models.Tank.find($stateParams.tankId)
     Models.Tank.bindOne($stateParams.tankId, $scope, "tank")
 
     $scope.addCanister = function () {
