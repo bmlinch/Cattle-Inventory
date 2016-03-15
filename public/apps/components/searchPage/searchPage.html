@@ -1,16 +1,34 @@
+<h1 class="LightColor">Search</h1>
+<!--<input class="form-control inputField" ng-model="searchQ" type="text" ng-upkey="searchFn(searchQ)"/>
 
-<div class="panel panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
+
+
+
+<div class="panel panel-default" ng-repeat="item in herds | filter: searchQ | orderBy: sortOrder track by $index">
+    <a class="LightColor" ui-sref="#">{{item.num}}
+        <div class="panel-body">
+        </div>
+    </a>
+</div>
+-->
+
+
+
+
+
+
+<!--<div class="panel panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
     <div class="panel-body text-center">
 
-        <h4>Search by:</h4>
-        <button class="btn btn-md buttonSpacing" ui-sref="bullSearch">Bull/Tank/Cane</button>
+        <h4 class="LightColor">Search by:</h4>
+        <button class="classyButton btn btn-md buttonSpacing" ui-sref="bullSearch">Bull/Tank/Cane</button>
         <br>
-        <button class="btn btn-md buttonSpacing" ui-sref="cowSearch">
+        <button class="classyButton btn btn-md buttonSpacing" ui-sref="cowSearch">
             Cow/Herd/Pregnant/
             <br>
             Miscarriage
         </button>
 
     </div>
-</div>
+</div>-->
 

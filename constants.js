@@ -3,6 +3,7 @@ app.constant('CONSTANTS', (function(){
     
     
     return {
-        fbRef: root
+        fbRef: root,
+        // tags: tags
     }
 }()));
