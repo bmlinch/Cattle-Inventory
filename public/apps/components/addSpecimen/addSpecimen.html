@@ -12,11 +12,13 @@
 <div class="panel panel-default">
     <div class="panel-body">
         
-        <div class="list-group" ng-repeat="cane in myTank.canes track by $index">
-            <div class="list-group-item">{{cane.bullId}}</div>
+        <div class="list-group" ng-repeat="cane in canister.canes track by $index">
+            <div class="list-group-item">{{cane.bullId}}: <span class="badge">Units: {{cane.units}}</span></div>
         </div>
     </div>
 </div>
+
+
 
 <!--<div ng-repeat="sample in tank.canisters[i].canes track by $index">
     <ul>

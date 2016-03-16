@@ -3,15 +3,9 @@
 <button type="button" class="btn btn-md buttonSpacing classyButton" ng-click="addCow()">Add Livestock</button>
 
 <h4 class="LightColor">Cows</h4>
-<div class="panel panel-default" ng-repeat="cow in cows track by cow.id">
+<div class="panel panel-default" ng-repeat="cow in herd.cows track by $index">
+        <a class="LightColor">{{cow.num}}
     <div class="panel-body">
-        <a class="LightColors">{{cow.id}}</a>
     </div>
-</div>
-
-<h4 class="LightColor">Herd Bulls</h4>
-<div class="panel panel-default" ng-repeat="bull in herdBulls track by bull.id">
-    <div class="panel-body">
-        <a class="LightColors">{{bull.id}}</a>
-    </div>
+        </a>    
 </div>

@@ -1,17 +1,16 @@
-app.controller('AddBull', function($rootScope, $scope, $stateParams, Models){
+app.controller('AddBull', function($rootScope, $scope, $stateParams, Models) {
     Models.Tank.find($stateParams.tankId).then(load);
-    Models.Tank.bindOne($stateParams.tankID, $scope, "tank");
+    Models.Tank.bindOne($stateParams.tankId, $scope, "tank");
     var i = $stateParams.canisterId;
-    function load(foo){
-        console.log($stateParams)
-    $scope.myTank = foo.canisters[$stateParams.canisterId];     
-        debugger;
+
+    function load(tank) {
+        $scope.canister = tank.canisters[i];
     }
 
-    $scope.addCane = function () {
+    $scope.addCane = function() {
         $scope.tank.canisters[i].canes = $scope.tank.canisters[i].canes || [];
         $scope.tank.canisters[i].canes.push($scope.cane);
         $scope.tank.DSSave();
         $scope.cane = '';
-    } 
+    }
 });

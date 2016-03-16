@@ -13,10 +13,5 @@ app.controller('TankOverview', function($rootScope, $scope, $stateParams, Models
         $scope.canister = '';
     } 
     
-    // $scope.addCane = function (canister, newCane) {
-    //     canister.canes = canister.canes || [];
-    //     canister.canes.push(newCane);
-    //     $scope.tank.DSSave();
-    // }
 });
 
