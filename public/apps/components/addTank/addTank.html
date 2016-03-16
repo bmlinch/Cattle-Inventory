@@ -1,11 +1,11 @@
-<h4 class="LightColor">Add Tank</h4>
+<h4 class="LightColor mpMargin">Add Tank</h4>
 <form name="addTankForm" ng-submit="addTank()">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Tank ID/Number" ng-model="tank.num">
     <br>
     <input class="btn btn-md classyButton" type="submit" value="Submit">
 </form>
 
-<div class="panel panel-default" ng-repeat="tank in tanks track by tank.id">
+<div class="panel panel-default dropText" ng-repeat="tank in tanks track by tank.id">
     <a class="LightColor" ui-sref="addCanister({tankId:tank.id})">{{tank.num}}
         <div class="panel-body">
         </div>

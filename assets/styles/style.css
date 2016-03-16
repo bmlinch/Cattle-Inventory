@@ -71,3 +71,6 @@ body{
     width: 90%;
     margin: 5%;
 }
+.dropText{
+   vertical-align:middle
+}

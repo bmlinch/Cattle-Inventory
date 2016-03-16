@@ -1,6 +1,11 @@
-<h4 class="LightColor">Add Specimen</h4>
+<h4 class="LightColor mpMargin">Add Specimen</h4>
 
-<form name="addBullForm" ng-submit="addCane()">
+<div>
+    <input type="checkbox" class="big-checkbox" id="BullCheck" ng-model="checked">
+    <label class="LightColor" for="BullCheck">Add New</label>   
+</div>
+
+<form name="addBullForm" ng-show="checked" ng-submit="addCane()">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Bull ID/Number" ng-model="cane.bullId">
     <br>
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Cane ID/Number" ng-model="cane.num">
