@@ -1,34 +1,21 @@
-<h1 class="LightColor  mpMargin">Search</h1>
-<!--<input class="form-control inputField" ng-model="searchQ" type="text" ng-upkey="searchFn(searchQ)"/>
+<h4 class="LightColor  mpMargin">Search</h4>
+<div>
+    <button class="btn btn-md buttonSpacing classyButton" ui-sref="#">Search Cows</button>
+    <br>
+    <button class="btn btn-md buttonSpacing classyButton" ui-sref="#">Search Specimen</button>
+    <br>
+</div>
 
-
-
-
-<div class="panel panel-default" ng-repeat="item in herds | filter: searchQ | orderBy: sortOrder track by $index">
-    <a class="LightColor" ui-sref="#">{{item.num}}
+<div class="panel panel-default dropText" ng-repeat="tank in tanks track by tank.id"> 
+    <a class="LightColor">{{cane.canes}}
         <div class="panel-body">
         </div>
     </a>
 </div>
--->
-
-
-
-
-
-
-<!--<div class="panel panel col-xs-10 col-xs-offset-1 col-md-4 col-md-offset-4" id="panelBackground">
-    <div class="panel-body text-center">
-
-        <h4 class="LightColor">Search by:</h4>
-        <button class="classyButton btn btn-md buttonSpacing" ui-sref="bullSearch">Bull/Tank/Cane</button>
-        <br>
-        <button class="classyButton btn btn-md buttonSpacing" ui-sref="cowSearch">
-            Cow/Herd/Pregnant/
-            <br>
-            Miscarriage
-        </button>
-
-    </div>
+<!--
+<div class="panel panel-default dropText" ng-repeat="herd in herds track by herd.id">
+    <a class="LightColor">{{herd.cows}}
+        <div class="panel-body">
+        </div>
+    </a>
 </div>-->
-
