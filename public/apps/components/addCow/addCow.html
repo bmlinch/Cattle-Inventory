@@ -3,7 +3,7 @@
     <input type="checkbox" class="big-checkbox" id="BullCheck" ng-model="checked">
     <label class="LightColor" for="BullCheck">Bull</label>   
 </div>
-<form name="addCowForm" ng-submit="addCow()">
+<form name="addCowForm" ng-submit="addCow($event)">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.num">
     <br>
     <div ng-hide="checked">
