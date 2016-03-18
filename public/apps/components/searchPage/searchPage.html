@@ -1,21 +1,29 @@
 <h4 class="LightColor  mpMargin">Search</h4>
+<!--Search buttons and input field-->
 <div>
-    <button class="btn btn-md buttonSpacing classyButton" ui-sref="#">Search Cows</button>
+    <button class="btn btn-md buttonSpacing classyButton" ng-click="searchCow = !searchCow">Search Cows</button>
     <br>
-    <button class="btn btn-md buttonSpacing classyButton" ui-sref="#">Search Specimen</button>
+    <button class="btn btn-md buttonSpacing classyButton" ng-click="searchBull = !searchBull">Search Specimen</button>
     <br>
+    <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Search" ng-model="searchText">
 </div>
-
-<div class="panel panel-default dropText" ng-repeat="tank in tanks track by tank.id"> 
-    <a class="LightColor">{{cane.canes}}
-        <div class="panel-body">
-        </div>
-    </a>
+<!--ng repeat for every bull specimen-->
+<div ng-show="searchBull">
+    <div class="panel panel-default dropText" ng-repeat="bull in bulls | filter: searchText track by bull.bullId">
+        <a class="LightColor">{{bull.bullId}}
+            <div class="panel-body">
+                <span class="badge">{{bull.tankNum}}: {{bull.canisterNum}}</span>
+            </div>
+        </a>
+    </div>
 </div>
-<!--
-<div class="panel panel-default dropText" ng-repeat="herd in herds track by herd.id">
-    <a class="LightColor">{{herd.cows}}
-        <div class="panel-body">
-        </div>
-    </a>
-</div>-->
+<!--ng repeat for every cow-->
+<div ng-show="searchCow">
+    <div class="panel panel-default dropText" ng-repeat="cow in cows | filter: searchText track by cow.num">
+        <a class="LightColor">{{cow.num}}
+            <div class="panel-body">          
+                <span class="badge">{{cow.herdName}}</span> 
+            </div>
+        </a>
+    </div>
+</div>

@@ -1,28 +1,41 @@
-app.controller('SearchPage', function($rootScope, $state, $scope, Models, $stateParams){
-    // Models.Herd.findAll()
-    // Models.Herd.bindAll({ where: { userId: $rootScope.member.id } }, $scope, "herds")
-    
-    // Models.Tank.findAll();
-    // Models.Tank.bindAll({ where: { userId: $rootScope.member.id } }, $scope, "tanks")
-    
-    // $scope.tags = DataService.getTags();
-    
-    Models.Tank.findAll();
-    Models.Tank.bindAll({ where: { userId: $rootScope.member.id } }, $scope, "tanks").then(load);
-    
-    function load(tanks){
-        var poi = [];
-        for(var i = 0; i < tanks.length; i++){
-            var x = tanks[i].canisters;
-            for(var j = 0; j < x.length; j++){
-                var y = x[i].canes;
-                for(var k = 0; k < y.length; k++){
-                    var z = y[i];
-                    poi.push(z)
-                }
+app.controller('SearchPage', function($rootScope, $state, $scope, Models, $stateParams) {
+ 
+
+    Models.Tank.findAll({ where: { userId: $rootScope.member.id } }).then(loadTanks);
+    function loadTanks(tanks) {
+        var bulls = [];
+        tanks.forEach(function(tank) {
+            if(tank.canisters){
+                tank.canisters.forEach(function(canister, canisterId){
+                    if(canister.canes){
+                        canister.canes.forEach(function(cane){
+                            cane.tankNum = tank.num;
+                            cane.tankId = tank.id;
+                            cane.canisterNum = canister.num;
+                            cane.canisterId = canisterId;
+                            bulls.push(cane);
+                        })
+                    }
+                })
             }
-        }
-        console.log(poi)
+        })
+        $scope.bulls = bulls;
     }
-    
+    Models.Herd.findAll({ where: {userId: $rootScope.member.id} }).then(loadCows);
+    function loadCows(herds){
+        var cows = [];
+        herds.forEach(function(herd){
+            if(herd.cows){
+                herd.cows.forEach(function(cow){
+                    cow.herdName = herd.name;
+                    cows.push(cow);
+                    
+                })
+            }
+        })
+        $scope.cows = cows
+    }
+
+
+
 });
