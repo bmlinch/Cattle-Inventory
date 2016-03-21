@@ -5,6 +5,7 @@
 <h4 class="LightColor">Cows</h4>
 <div class="panel panel-default" ng-repeat="cow in herd.cows track by $index">
     <a class="LightColor" ng-click="cowEdit = !cowEdit">{{cow.num}}</a>
+    <button type="badge" class="badge btn-danger"ng-click="removeAnimal()">X</button>
     <div ng-show="cowEdit" class="panel-body">
         <form name="updateCowForm" ng-submit="updateCow()">
             <input class="big-checkbox" type="checkbox" id="PregCheck" ng-model="cow.pregnant" value="Pregnant">
@@ -16,7 +17,7 @@
             <input class="input-md inputField form-control" type="text" placeholder="Specimen ID" ng-model="cane.bullId">
             <br>
             <input class="input-md inputField form-control" type="number" placeholder="Specimen units used" ng-model="cane.units">
-            <button type="submit" class="btn btn-md classyButton">Update</button>
+            <button type="submit" class="btn btn-md classyButton">Update</button> 
         </form>
     </div>
 </div>

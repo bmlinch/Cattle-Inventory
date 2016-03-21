@@ -1,20 +1,8 @@
 <h4 class="LightColor mpMargin">Add Bovine</h4>
-<div>
-    <input type="checkbox" class="big-checkbox" id="BullCheck" ng-model="checked">
-    <label class="LightColor" for="BullCheck">Bull</label>   
-</div>
+
+
 <form name="addCowForm" ng-submit="addCow($event)">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="ID/Number" ng-model="cow.num">
-    <br>
-    <div ng-hide="checked">
-        <input class="big-checkbox" type="checkbox" id="MisCheck" ng-model="cow.miscarriage" value="Miscarriage">
-        <label class="LightColor" for="MisCheck">Miscarriage</label>
-    </div>
-    <br>
-    <div ng-hide="checked">
-        <input class="big-checkbox" type="checkbox" id="PregCheck" ng-model="cow.preggers" value="Pregnant">
-        <label class="LightColor" for="PregCheck">Pregnant</label>
-    </div>
     <br>
     <input class="btn classyButton btn-md buttonSpacing" type="submit" value="Submit">
 </form>

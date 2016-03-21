@@ -3,6 +3,7 @@ body{
 }
 .panel{
     background-color: #3E3D3D;
+    height: 50px!important;
 }
 .emblem{
     width: 150px;
@@ -73,4 +74,8 @@ body{
 }
 .dropText{
    vertical-align:middle
+}
+.badge{
+    float: right;
+    /*margin: 5px;*/
 }

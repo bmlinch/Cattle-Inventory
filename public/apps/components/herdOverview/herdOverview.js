@@ -9,5 +9,9 @@ app.controller('HerdOverview', function($scope, $stateParams, $state, Models){
     
     $scope.updateCow = function(){
         debugger;
-    }   
+    }
+    $scope.removeAnimal = function(){
+        debugger;
+        $scope.herd.cows.destroy()
+    };
 });

@@ -9,7 +9,8 @@
 </div>
 <!--ng repeat for every bull specimen-->
 <div ng-show="searchBull">
-    <div class="panel panel-default dropText" ng-repeat="bull in bulls | filter: searchText track by bull.bullId">
+    <span class="LightColor">Specimen: </span>
+    <div class="panel panel-default dropText" ng-repeat="bull in bulls | filter: searchText track by $index">
         <a class="LightColor">{{bull.bullId}}
             <div class="panel-body">
                 <span class="badge">{{bull.tankNum}}: {{bull.canisterNum}}</span>
@@ -19,6 +20,7 @@
 </div>
 <!--ng repeat for every cow-->
 <div ng-show="searchCow">
+    <span class="LightColor">Herd Animal: </span>
     <div class="panel panel-default dropText" ng-repeat="cow in cows | filter: searchText track by cow.num">
         <a class="LightColor">{{cow.num}}
             <div class="panel-body">          
