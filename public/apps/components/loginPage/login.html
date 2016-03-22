@@ -1,0 +1,37 @@
+<h4 class="LightColor mpMargin">Sign in</h4>
+<form  class="form" ng-submit="submitForm()" ng-if="!ac.member">
+    
+    
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon authInput" id="basic-addon1">
+                <span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            </span>
+            <input class="authInput form-control" placeholder="Email" type="email" ng-model="ac.user.email" aria-describedby="basic-addon1">
+        </div>
+    </div>
+    
+    <div class="form-group">
+        <div class="input-group">
+            <span class="input-group-addon authInput" id="basic-addon1">
+                <span class="glyphicon glyphicon-lock" aria-hidden="true"></span>
+            </span>
+            <input class="authInput form-control" placeholder="Password" type="password" ng-model="ac.user.password">
+        </div>
+    </div>
+    
+    
+    <div class="button-group">
+        <button class="btn classyButton btn-primary" type="submit" ng-click="submitForm = login">Login</button>
+        <button class="btn classyButton btn-primary" type="submit" ng-click="submitForm = register">Register</button>
+    </div>
+</form>
+<button class="btn btn-primary" ng-click="logout()" ng-if="ac.member">Logout</button>
+<div class="alert alert-danger" ng-if="authErr">{{authErr}}</div>
+
+
+<!--
+<div class="input-group">
+    <span class="input-group-addon" id="basic-addon1">@</span>
+    <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+</div>-->
