@@ -1,8 +1,5 @@
-<h4 class="LightColor mpMargin">{{herd.name}}</h4>
+<h4 class="LightColor mpMargin">Livestock in {{herd.name}}</h4>
 
-<button type="button" class="btn btn-md buttonSpacing classyButton" ng-click="addCow()">Add Livestock</button>
-
-<h4 class="LightColor">Cows</h4>
 <div class="panel panel-default" ng-repeat="cow in herd.cows track by $index">
     <a class="LightColor" ng-click="cowEdit = !cowEdit">{{cow.num}}</a>
     <button type="badge" class="badge btn-danger"ng-click="removeAnimal()">X</button>
@@ -22,7 +19,12 @@
     </div>
 </div>
 
-
+<!--FAB add cow-->
+            <a ng-click="addCow()">
+                <button type="button" class="md-fab"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span></button>
+            </a>
+            
+<!--<button type="button" class="btn btn-md buttonSpacing classyButton" ng-click="addCow()">Add Livestock</button>            -->
 
 <!--<form name="updateCowForm" ng-submit="updateCow()">
     <input class="input-md inputField form-control inputSpacing" type="text" placeholder="Tank ID/Number" ng-model="tank.num">
