@@ -11,9 +11,9 @@
 <div ng-show="searchBull">
     <span class="LightColor">Specimen: </span>
     <div class="panel panel-default dropText" ng-repeat="bull in bulls | filter: searchText track by $index">
-        <a class="LightColor">{{bull.bullId}}
+        <a class="LightColor">{{bull.bullId}} - {{bull.tankNum}}: {{bull.canisterNum}}
             <div class="panel-body">
-                <span class="badge">{{bull.tankNum}}: {{bull.canisterNum}}</span>
+                <span class="badge">Units Remaining: {{bull.units}}</span>
             </div>
         </a>
     </div>
