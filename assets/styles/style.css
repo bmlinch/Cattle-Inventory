@@ -82,13 +82,13 @@ body{
 button.md-fab{
     background: linear-gradient(to right, #92EA76, #D8E8D6);;
     color: #3E3D3D;
-    font-size: x-large;
-    line-height: 4rem;
+    font-size: 1em;
+    line-height: 1rem;
     min-width: 0;
     width: 5.6rem;
     height: 5.6rem;
     border-radius: 50%;
     position: fixed !important;
-    top: 90%;
-    left: 85%;
+    top: 88%;
+    left: 77%;
 } 
