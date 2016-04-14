@@ -1,0 +1,39 @@
+{
+  "name": "js-data-firebaseauth-angular",
+  "authors": [
+    "joverall22 <joverall22@gmail.com>"
+  ],
+  "description": "An Angular Firebase-Auth Directive using JS-Data",
+  "main": "",
+  "moduleType": [],
+  "keywords": [
+    "Angular",
+    "Firebase",
+    "JS-Data",
+    "Authentication"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/jakeoverall/js-data-firebaseauth-angular",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-data-angular": "^3.1.0",
+    "js-data": "^2.9.0",
+    "js-data-firebase": "^2.1.1"
+  },
+  "_release": "633b2352aa",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "633b2352aa5822c62b1e2422273dea3665c92f25"
+  },
+  "_source": "git://github.com/jakeoverall/js-data-firebaseauth-angular.git",
+  "_target": "*",
+  "_originalSource": "js-data-firebaseauth-angular",
+  "_direct": true
+}

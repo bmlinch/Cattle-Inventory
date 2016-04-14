@@ -1,2 +1,10 @@
-/bower_components
+/bower_components/angular
+/bower_components/angular-ui-router
+/bower_components/bootstrap
+/bower_components/firebase
+/bower_components/jquery
+/bower_components/js-data
+/bower_components/js-data-angular
+/bower_components/js-data-firebase
+/bower_components/js-data-http
 /node_modules
