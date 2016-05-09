@@ -14,7 +14,7 @@
 					auth: '&',
 					unauth: '&'
 				},
-				templateUrl: '/js-data-firebaseauth-angular/auth-form.html'
+				templateUrl: 'js-data-firebaseauth-angular/auth-form.html'
 			}
 		})
 
