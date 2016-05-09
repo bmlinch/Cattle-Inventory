@@ -16,7 +16,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('mainPage', {
             url: '/mainPage',
-            templateUrl: '/public/apps/components/mainPage/mainPage.html',
+            templateUrl: 'public/apps/components/mainPage/mainPage.html',
             controller: 'MainPage',
             controllerAs: 'mp'
         })
