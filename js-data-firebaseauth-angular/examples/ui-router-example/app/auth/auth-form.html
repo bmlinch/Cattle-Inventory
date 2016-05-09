@@ -1,0 +1,22 @@
+<div class="container">
+	<div class="row">
+		<div class="col-sm-8 col-sm-offset-2">
+			<form class="form" ng-submit="submitForm()" ng-if="!ac.member">
+				<div class="form-group">
+					<label for="email">Email:</label>
+					<input class="form-control" type="email" ng-model="ac.user.email">
+				</div>
+				<div class="form-group">
+					<label for="password">Password:</label>
+					<input class="form-control" type="password" ng-model="ac.user.password">
+				</div>
+				<div class="button-group">
+					<button class="btn btn-primary" type="submit" ng-click="submitForm = login">Login</button>
+					<button class="btn btn-primary" type="submit" ng-click="submitForm = register">Register</button>
+				</div>
+			</form>
+			<button class="btn btn-primary" ng-click="logout()" ng-if="ac.member">Logout</button>
+			<div class="alert alert-danger" ng-if="authErr">{{authErr}}</div>
+		</div>
+	</div>
+</div>

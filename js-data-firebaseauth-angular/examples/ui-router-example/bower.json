@@ -1,0 +1,24 @@
+{
+  "name": "js-data-firebase",
+  "authors": [
+    "Jake Overall <joverall22@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+	"node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-data-angular": "^3.1.0",
+    "js-data": "^2.9.0",
+    "js-data-firebase": "^2.1.1",
+    "angular-ui-router": "ui-router#^0.2.18"
+  }
+}

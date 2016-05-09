@@ -1,0 +1,21 @@
+{
+  "name": "bcw-student-blog",
+  "authors": [
+    "joverall22 <joverall22@gmail.com>"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "js-data-firebase-auth": "js-data-firebaseauth-angular#*"
+  }
+}
