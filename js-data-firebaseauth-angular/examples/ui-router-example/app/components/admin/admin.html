@@ -1,0 +1,37 @@
+Welcome {{member.name}}, The product store currently has {{storeCount -1}} items
+<form ng-submit="addProduct()" ng-show="!edit">
+	<div class="form-group">
+		<label>Product Name:</label>
+		<input type="text" class="form-control" ng-model="newProduct.name">
+	</div>
+	<div class="form-group">
+		<label>Price:</label>
+		<input class="form-control" ng-model="newProduct.price">
+	</div>	
+	<div class="form-group">
+		<label>Quantity:</label>
+		<input class="form-control" ng-model="newProduct.quantity">
+	</div>
+	<button type="submit" class="btn btn-large btn-block btn-primary">Add New Product</button>
+</form>
+
+<form ng-submit="addProduct()" ng-show="edit">
+	<div class="form-group">
+		<label>Product Name:</label>
+		<input type="text" class="form-control" ng-model="editing.name">
+	</div>
+	<div class="form-group">
+		<label>Price:</label>
+		<input class="form-control" ng-model="editing.price">
+	</div>	
+	<div class="form-group">
+		<label>Price:</label>
+		<input class="form-control" ng-model="editing.quantity">
+	</div>
+	<button type="submit" class="btn btn-large btn-block btn-primary">Update Product</button>
+	<button type="button" class="btn btn-large btn-block btn-danger" ng-click="revert(editing)">Cancel Edit</button>
+</form>
+
+<ul>
+	<li ng-repeat="product in products track by product.id">Price: {{product.price}}, Product: {{product.name}}, Quantity: {{product.quantity}} <button ng-click="editProduct(product)">Edit</button></li>
+</ul>

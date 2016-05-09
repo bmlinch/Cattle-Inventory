@@ -1,0 +1,22 @@
+<html ng-app="basic">
+<head>
+	<meta charset="UTF-8">
+	<title>basic</title>
+</head>
+<body ng-controller="MainController">
+	
+	<firebase-auth auth="onAuthCallback" unauth="unauthCallback"></firebase-auth>
+
+<!--Load Libraries-->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/firebase/firebase.js"></script>
+    <script src="bower_components/js-data/dist/js-data.js"></script>
+    <script src="bower_components/js-data-firebase/dist/js-data-firebase.js"></script>
+    <script src="bower_components/js-data-angular/dist/js-data-angular.js"></script>
+		<script src="bower_components/js-data-firebase-auth/auth-component.js"></script>
+
+		<!--You can customize the User Model as needed-->
+		<script src="bower_components/js-data-firebase-auth/user-model.js"></script>
+		<script src="app/config/init.js"></script>
+</body>
+</html>
