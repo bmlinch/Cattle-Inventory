@@ -23,7 +23,7 @@ app.config(function ($stateProvider, $urlRouterProvider) {
 
         .state('addTank', {
             url: '/addTank/',//farm/tank/ this page adds the tank id when you create it
-            templateUrl: '/public/apps/components/addTank/addTank.html',
+            templateUrl: 'public/apps/components/addTank/addTank.html',
             controller: 'AddTank',
             controllerAs: 'at'
         })
