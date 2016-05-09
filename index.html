@@ -22,12 +22,12 @@
             <button id="single-button" type="button" class="btn btn-default nbCenter" uib-dropdown-toggle ng-disabled="disabled"><span class="glyphicon glyphicon-menu-hamburger" aria-hidden="true"></span>
             </button>
             <ul uib-dropdown-menu class="dropdown-menu-right"role="menu" aria-labelledby="single-button">
-                <li role="menuitem"><a href="/#/mainPage">Home</a></li>
-                <li role="menuitem"><a href="/#/addTank/">Add Tank</a></li>
-                <li role="menuitem"><a href="/#/addHerd">Add Herd</a></li>
+                <li role="menuitem"><a ui-sref="mainPage">Home</a></li>
+                <li role="menuitem"><a ui-sref="addTank">Add Tank</a></li>
+                <li role="menuitem"><a ui-sref="addHerd">Add Herd</a></li>
                 <!--<li role="menuitem"><a href="/#/">Specimen/cane Search</a></li>-->
                 <!--<li role="menuitem"><a href="/#/logIn">Log In</a></li>-->
-                <li role="menuitem"><a href="/#/searchPage">Search</a></li>
+                <li role="menuitem"><a ui-sref="searchPage">Search</a></li>
                 <li class="divider"></li>
                 <li role="menuitem"><a ng-click="logout()">Log Out</a></li>
             </ul>
